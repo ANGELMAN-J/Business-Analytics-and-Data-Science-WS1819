@@ -1,6 +1,16 @@
 # Business Analytics and Data Science WS1819
-#projectdesc
+For my course Business Analytics and Data Science, all students had to participate in an [in-class Kaggle competition](https://www.kaggle.com/c/bads1718). The goal was to predict product returns using real world data of an online fashion retailer (binary classification with artificially balanced classes). The Kaggle competition was scored in terms of AUC and I ranked 2nd out of 118 students.
 
+However, grading is not done in terms of AUC but in terms of error costs. The idea is that the e-tailer could intervene before an order is made (i.e. by offering fewer payment options, claiming the item is out of stock, etc.) to deter an order that is likely to be returned. To mirror this, we were given a cost matrix with highly asymmetric error costs (false positives are much more costly than false negatives). This turned the challenge from a predictive classification to a prescriptive task.
+
+To account for that, I:
+- calculate the optimal decision threshold τ per order and make a profit-maximising decision
+- use models calibrated with Platt's Scaling and assessed by a reliability/calibration curve
+- build a "zoo" of heterogenous base models
+- implemented an Ensemble Selection algorithm selective averaging ensemble out of my model zoo using, optimising for AUC
+- and a version of it optimising for profit.
+
+My final ensemble reduces costs by 30% (compared to never intervening) and 6% compared to a well-tuned Logistic Regression.
 
 In this repository, you can find:
 - My term paper which describes the project in more detail.
