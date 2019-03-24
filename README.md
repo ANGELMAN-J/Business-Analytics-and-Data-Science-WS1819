@@ -9,7 +9,9 @@ In this repository, you can find:
 - A notebook with basic EDA on the original data.
 
 I've decided to only share the transformed data and Ensembling code since I do not have permission to share the original data. As with most data science projects, about 80-90% of my effort went into data cleaning, EDA and feature engineering.
+
 These were the columns we got initially: 
+
 'order_date', 'delivery_date', 'item_id', 'item_size', 'item_color','brand_id', 'item_price', 'user_id', 'user_title', 'user_dob','user_state', 'user_reg_date', 'return'
 
 From this I made features such as:
