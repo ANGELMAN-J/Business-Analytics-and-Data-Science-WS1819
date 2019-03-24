@@ -7,10 +7,10 @@ To account for that, I:
 - calculate the optimal decision threshold τ per order and make a profit-maximising decision
 - use models calibrated with Platt's Scaling and assessed by a reliability/calibration curve
 - build a "zoo" of heterogenous base models
-- implemented an Ensemble Selection algorithm selective averaging ensemble out of my model zoo using, optimising for AUC
+- implemented an Ensemble Selection algorithm to build a selective averaging ensemble from my model zoo, optimising for AUC
 - and a version of it optimising for profit.
 
-My final ensemble reduces costs by 30% (compared to never intervening) and 6% compared to a well-tuned Logistic Regression.
+My final, profit-concious ensemble reduces costs by 30% (compared to never intervening) and 6% compared to a well-tuned Logistic Regression.
 
 In this repository, you can find:
 - My term paper which describes the project in more detail.
